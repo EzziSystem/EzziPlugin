@@ -1,0 +1,35 @@
+{
+    "name": "webguosai/idealright-plugin",
+    "description": "laravel 插件扩展包",
+    "support": {
+        "issues": "https://github.com/webguosai/idealright-plugin/issues",
+        "source": "https://github.com/webguosai/idealright-plugin"
+    },
+    "require": {
+        "php": "^7.2.5",
+        "ext-json": "*",
+        "illuminate/support": "~7|~8"
+    },
+    "authors": [
+        {
+            "name": "webguosai",
+            "email": "501807312@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Webguosai\\IdealRight\\Plugin\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webguosai\\IdealRight\\Plugin\\Providers\\PluginServiceProvider"
+            ],
+            "aliases": {
+                "Plugin": "Webguosai\\IdealRight\\Plugin\\Facades\\Plugin"
+            }
+        }
+    },
+    "license": "MIT"
+}
