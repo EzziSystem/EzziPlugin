@@ -1,9 +1,9 @@
 {
-    "name": "webguosai/idealright-plugin",
+    "name": "ezzi-system/ezzi-plugin",
     "description": "laravel 插件扩展包",
     "support": {
-        "issues": "https://github.com/webguosai/idealright-plugin/issues",
-        "source": "https://github.com/webguosai/idealright-plugin"
+        "issues": "https://github.com/EzziSystem/EzziPlugin/issues",
+        "source": "https://github.com/EzziSystem/EzziPlugin"
     },
     "require": {
         "php": "^7.2.5",
@@ -18,16 +18,16 @@
     ],
     "autoload": {
         "psr-4": {
-            "Webguosai\\IdealRight\\Plugin\\": "src"
+            "EzziSystem\\EzziPlugin\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Webguosai\\IdealRight\\Plugin\\Providers\\PluginServiceProvider"
+                "EzziSystem\\EzziPlugin\\Providers\\PluginServiceProvider"
             ],
             "aliases": {
-                "Plugin": "Webguosai\\IdealRight\\Plugin\\Facades\\Plugin"
+                "Plugin": "EzziSystem\\EzziPlugin\\Facades\\Plugin"
             }
         }
     },

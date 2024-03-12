@@ -1,9 +1,9 @@
 <?php
 
-namespace Webguosai\IdealRight\Plugin\Providers;
+namespace EzziSystem\EzziPlugin\Providers;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
-use Webguosai\IdealRight\Plugin\Services\PluginService;
+use EzziSystem\EzziPlugin\Services\PluginService;
 
 class PluginServiceProvider extends LaravelServiceProvider
 {

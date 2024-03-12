@@ -1,6 +1,6 @@
 <?php
 
-namespace Webguosai\IdealRight\Plugin\Services;
+namespace EzziSystem\EzziPlugin\Services;
 
 interface PluginInterface
 {

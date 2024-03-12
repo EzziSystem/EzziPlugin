@@ -1,11 +1,11 @@
 <?php
 
-namespace Webguosai\IdealRight\Plugin\Facades;
+namespace EzziSystem\EzziPlugin\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Webguosai\IdealRight\Plugin\Services\PluginService
+ * @see \EzziSystem\EzziPlugin\Services\PluginService
  *
  * @method static void install(string $name) 安装插件
  * @method static void enable(string $name) 启用插件

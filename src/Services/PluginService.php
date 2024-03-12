@@ -1,9 +1,9 @@
 <?php
 
-namespace Webguosai\IdealRight\Plugin\Services;
+namespace EzziSystem\EzziPlugin\Services;
 
 use Illuminate\Support\Arr;
-use Webguosai\IdealRight\Plugin\Exceptions\PluginNotFoundException;
+use EzziSystem\EzziPlugin\Exceptions\PluginNotFoundException;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;

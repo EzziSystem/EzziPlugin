@@ -1,6 +1,6 @@
 <?php
 
-namespace Webguosai\IdealRight\Plugin\Exceptions;
+namespace EzziSystem\EzziPlugin\Exceptions;
 
 use Exception;
 
