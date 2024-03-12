@@ -23,7 +23,7 @@ composer require ezzisystem/ezzi-plugin
 然后运行下面的命令来发布资源：
 
 ```shell
-php artisan vendor:publish --provider="EzziSystem\EzziPlugin\Providers\ServiceProvider"
+php artisan vendor:publish --provider="EzziSystem\EzziPlugin\Providers\PluginServiceProvider"
 ```
 
 ## License
