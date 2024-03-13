@@ -230,7 +230,7 @@ class PluginService
      */
     protected function getProviderClass(string $name): ?string
     {
-        $class = 'IdealRight\\Plugin\\' . $name . '\Providers\ServiceProvider';
+        $class = 'EzziSystem\EzziPlugin\Plugins\\' . $name . '\Providers\ServiceProvider';
         if (!class_exists($class)) {
             $class = null;
         }
@@ -373,8 +373,7 @@ class PluginService
      */
     protected function runPlugin(string $name, string $method): bool
     {
-        $className = 'IdealRight\\Plugin\\' . $name . '\\' . $name;
-
+        $className = 'EzziSystem\EzziPlugin\Plugins\\' . $name . '\\' . $name;
         if (class_exists($className)) {
             $class = new $className();
             if (method_exists($class, $method)) {
