@@ -134,6 +134,9 @@ class PluginService
         foreach ($plugins as $plugin) {
             // 状态为已启用的
             if ($plugin['status'] == self::STATUS_ENABLE) {
+                // 加载插件的autoload
+                $this->loadPluginAutoload($plugin['name']);
+
                 // 注册插件的 provider
                 $this->registerPluginProvider($plugin['name']);
 
@@ -347,6 +350,19 @@ class PluginService
     protected function getPluginDir(string $name): string
     {
         return $this->pluginDir . $name . DIRECTORY_SEPARATOR;
+    }
+
+    /**
+     * 加载插件的autoload
+     * @param string $name
+     * @return void
+     */
+    protected function loadPluginAutoload(string $name)
+    {
+        $path = $this->getPluginDir($name) . 'vendor/autoload.php';
+        if (file_exists($path)) {
+            require_once $path;
+        }
     }
 
     /**
