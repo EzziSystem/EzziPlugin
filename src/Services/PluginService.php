@@ -233,7 +233,7 @@ class PluginService
      */
     protected function getProviderClass(string $name): ?string
     {
-        $class = 'EzziSystem\EzziPlugin\Plugins\\' . $name . '\Providers\ServiceProvider';
+        $class = 'EzziSystem\EzziPlugin\Plugins\\' . $name . '\Providers\\' . $name . 'ServiceProvider';
         if (!class_exists($class)) {
             $class = null;
         }
