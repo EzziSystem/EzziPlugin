@@ -23,9 +23,4 @@ interface PluginInterface
      * 插件禁用
      */
     public function disable();
-
-    /**
-     * 插件启用后始终会执行的方法
-     */
-    public function boot();
 }

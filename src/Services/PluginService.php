@@ -141,11 +141,11 @@ class PluginService
                 $this->registerPluginProvider($plugin['name']);
 
                 // 执行插件的启动方法
-                try {
-                    $this->runPlugin($plugin['name'], self::STATUS_BOOT);
-                } catch (Exception $e) {
-
-                }
+                // try {
+                //     $this->runPlugin($plugin['name'], self::STATUS_BOOT);
+                // } catch (Exception $e) {
+                //
+                // }
 
             }
         }
