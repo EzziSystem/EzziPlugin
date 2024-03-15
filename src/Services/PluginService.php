@@ -265,11 +265,17 @@ class PluginService
      */
     protected function getPluginInfo(string $name): array
     {
+        $info = [];
         $file = $this->getPluginDir($name) . 'info.ini';
-        $info = parse_ini_file($file, true);
-        return Arr::only($info, [
-            'title', 'desc', 'author', 'website', 'version', 'license'
-        ]);
+
+        if (file_exists($file)) {
+            $info = parse_ini_file($file, true);
+            $info = Arr::only($info, [
+                'title', 'desc', 'author', 'website', 'version', 'license'
+            ]);
+        }
+
+        return $info;
     }
 
     /**
