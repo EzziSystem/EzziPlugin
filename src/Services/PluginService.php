@@ -16,7 +16,6 @@ class PluginService
     const STATUS_UNINSTALL = 'unInstall';
     const STATUS_ENABLE    = 'enable';
     const STATUS_DISABLE   = 'disable';
-    const STATUS_BOOT      = 'boot';
 
     /**
      * @var string 插件目录
@@ -139,13 +138,6 @@ class PluginService
 
                 // 注册插件的 provider
                 $this->registerPluginProvider($plugin['name']);
-
-                // 执行插件的启动方法
-                // try {
-                //     $this->runPlugin($plugin['name'], self::STATUS_BOOT);
-                // } catch (Exception $e) {
-                //
-                // }
 
             }
         }
@@ -397,7 +389,7 @@ class PluginService
     {
         $className = $this->getProviderClass($name);
         if (class_exists($className)) {
-            $class = new $className();
+            $class = new $className(app());
             if (method_exists($class, $method)) {
                 try {
                     call_user_func([$class, $method]);
