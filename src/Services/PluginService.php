@@ -133,8 +133,8 @@ class PluginService
         foreach ($plugins as $plugin) {
             // 状态为已启用的
             if ($plugin['status'] == self::STATUS_ENABLE) {
-                // 加载插件的autoload
-                $this->loadPluginAutoload($plugin['name']);
+                // 加载插件的autoload (不再自动加载, 会与主包冲突)
+                // $this->loadPluginAutoload($plugin['name']);
 
                 // 注册插件的 provider
                 $this->registerPluginProvider($plugin['name']);
